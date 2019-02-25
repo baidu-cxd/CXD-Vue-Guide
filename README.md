@@ -1,6 +1,6 @@
 # cxd-guide
 
-cxd 导航网站
+cxd 导航
 
 ## Project setup
 ```
