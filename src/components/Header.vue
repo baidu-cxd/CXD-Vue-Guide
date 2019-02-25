@@ -37,6 +37,7 @@ export default {
 <style lang="stylus">
   //  顶部导航栏全局样式
   .cxd-header
+    z-index 100
     width 100%
     height 122px
     position fixed // 导航栏定位
@@ -49,7 +50,7 @@ export default {
       top 50%
       transform translateY(-50%)
       margin-left 100px // 左侧位置  
-      z-index 1
+      z-index 3
     // 汉堡菜单组件
     .header-humberger
       z-index 3
@@ -59,6 +60,8 @@ export default {
       transform translateY(-50%)
       width 15px
       height 14px 
+      &:hover
+        cursor pointer
       .humberger-ele
         display block
         width 15px

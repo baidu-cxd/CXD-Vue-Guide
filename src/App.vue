@@ -2,15 +2,18 @@
   <div id="app">
     <Header/>
     <router-view/>
+    <Footer/>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   components: {
-    Header
+    Header,
+    Footer
   }
 }
 </script>
@@ -22,7 +25,7 @@ export default {
   a
     text-decoration-line none
   h1, h2, h3, h4, h5, p, a, span 
-    font-family: -apple-system, BlinkMacSystemFont,"SF Pro SC","SF Pro Text","Helvetica Neue",  Helvetica, "PingFang SC", Roboto, 'Arial','microsoft yahei ui',"Microsoft YaHei",SimSun, sans-serif;
+    font-family: "PingFang SC", "SF Pro SC","SF Pro Text","Helvetica Neue",  Helvetica,  Roboto, 'Arial','microsoft yahei ui',"Microsoft YaHei",SimSun, sans-serif;
     /*修改浏览器渲染字体效果*/ 
     -moz-osx-font-smoothing: grayscale;  
     -webkit-font-smoothing: antialiased; 
