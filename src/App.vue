@@ -22,6 +22,7 @@ export default {
   body
     margin 0
     padding 0
+    min-width 1080px
   a
     text-decoration-line none
   h1, h2, h3, h4, h5, p, a, span 

@@ -10,6 +10,7 @@
   .cxd-footer
     height 120px
     margin 0 80px 
+    background-color #fff
     a
      line-height 20px
      font-size 14px
