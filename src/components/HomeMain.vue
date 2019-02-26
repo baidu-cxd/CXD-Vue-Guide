@@ -1,5 +1,6 @@
 <template>
   <div class="home-main">
+    <SideComponent/>
     <div class="home-main-bg">
         <div class="home-main-bg-wrp">
           <img src="@/assets/bg.png" alt="">
@@ -42,6 +43,16 @@
     </div>
   </div>
 </template>
+
+<script>
+import SideComponent from '@/components/SideComponent.vue'
+export default {
+  components: {
+    SideComponent
+  }
+}
+</script>
+
 
 <style lang="stylus">
 .home-main

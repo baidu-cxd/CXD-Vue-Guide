@@ -49,14 +49,14 @@ export default {
       position absolute
       top 50%
       transform translateY(-50%)
-      margin-left 100px // 左侧位置  
+      margin-left 50px // 左侧位置  
       z-index 3
     // 汉堡菜单组件
     .header-humberger
       z-index 3
       position absolute 
       top 50%
-      right 100px
+      right 50px
       transform translateY(-50%)
       width 15px
       height 14px 
