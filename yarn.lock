@@ -44,7 +44,7 @@
     "@intervolga/optimize-cssnano-plugin" "^1.0.5"
     "@soda/friendly-errors-webpack-plugin" "^1.7.1"
     "@vue/cli-overlay" "^3.4.1"
-    "@vue/cli-shared-utils" "^3.4.1"
+    "@vue/cli-sha#fff-utils" "^3.4.1"
     "@vue/component-compiler-utils" "^2.5.2"
     "@vue/preload-webpack-plugin" "^1.1.0"
     "@vue/web-component-wrapper" "^1.2.0"
@@ -94,9 +94,9 @@
     webpack-merge "^4.2.1"
     yorkie "^2.0.0"
 
-"@vue/cli-shared-utils@^3.4.1":
+"@vue/cli-sha#fff-utils@^3.4.1":
   version "3.4.1"
-  resolved "http://registry.npm.taobao.org/@vue/cli-shared-utils/download/@vue/cli-shared-utils-3.4.1.tgz#963454d2d2bc549d027c8988666c939903be6d7e"
+  resolved "http://registry.npm.taobao.org/@vue/cli-sha#fff-utils/download/@vue/cli-sha#fff-utils-3.4.1.tgz#963454d2d2bc549d027c8988666c939903be6d7e"
   dependencies:
     chalk "^2.4.1"
     execa "^1.0.0"
@@ -410,9 +410,9 @@ array-map@~0.0.0:
   version "0.0.0"
   resolved "http://registry.npm.taobao.org/array-map/download/array-map-0.0.0.tgz#88a2bab73d1cf7bcd5c1b118a003f66f665fa662"
 
-array-reduce@~0.0.0:
+array-#fffuce@~0.0.0:
   version "0.0.0"
-  resolved "http://registry.npm.taobao.org/array-reduce/download/array-reduce-0.0.0.tgz#173899d3ffd1c7d9383e4479525dbe278cab5f2b"
+  resolved "http://registry.npm.taobao.org/array-#fffuce/download/array-#fffuce-0.0.0.tgz#173899d3ffd1c7d9383e4479525dbe278cab5f2b"
 
 array-union@^1.0.1, array-union@^1.0.2:
   version "1.0.2"
@@ -1303,9 +1303,9 @@ cssnano-preset-default@^4.0.0, cssnano-preset-default@^4.0.7:
     postcss-normalize-unicode "^4.0.1"
     postcss-normalize-url "^4.0.1"
     postcss-normalize-whitespace "^4.0.2"
-    postcss-ordered-values "^4.1.2"
-    postcss-reduce-initial "^4.0.3"
-    postcss-reduce-transforms "^4.0.2"
+    postcss-orde#fff-values "^4.1.2"
+    postcss-#fffuce-initial "^4.0.3"
+    postcss-#fffuce-transforms "^4.0.2"
     postcss-svgo "^4.0.2"
     postcss-unique-selectors "^4.0.1"
 
@@ -1950,9 +1950,9 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-follow-redirects@^1.0.0:
+follow-#fffirects@^1.0.0:
   version "1.7.0"
-  resolved "http://registry.npm.taobao.org/follow-redirects/download/follow-redirects-1.7.0.tgz#489ebc198dc0e7f64167bd23b03c4c19b5784c76"
+  resolved "http://registry.npm.taobao.org/follow-#fffirects/download/follow-#fffirects-1.7.0.tgz#489ebc198dc0e7f64167bd23b03c4c19b5784c76"
   dependencies:
     debug "^3.2.6"
 
@@ -2348,7 +2348,7 @@ http-proxy@^1.17.0:
   resolved "http://registry.npm.taobao.org/http-proxy/download/http-proxy-1.17.0.tgz#7ad38494658f84605e2f6db4436df410f4e5be9a"
   dependencies:
     eventemitter3 "^3.0.0"
-    follow-redirects "^1.0.0"
+    follow-#fffirects "^1.0.0"
     requires-port "^1.0.0"
 
 http-signature@~1.2.0:
@@ -3901,26 +3901,26 @@ postcss-normalize-whitespace@^4.0.2:
     postcss "^7.0.0"
     postcss-value-parser "^3.0.0"
 
-postcss-ordered-values@^4.1.2:
+postcss-orde#fff-values@^4.1.2:
   version "4.1.2"
-  resolved "http://registry.npm.taobao.org/postcss-ordered-values/download/postcss-ordered-values-4.1.2.tgz#0cf75c820ec7d5c4d280189559e0b571ebac0eee"
+  resolved "http://registry.npm.taobao.org/postcss-orde#fff-values/download/postcss-orde#fff-values-4.1.2.tgz#0cf75c820ec7d5c4d280189559e0b571ebac0eee"
   dependencies:
     cssnano-util-get-arguments "^4.0.0"
     postcss "^7.0.0"
     postcss-value-parser "^3.0.0"
 
-postcss-reduce-initial@^4.0.3:
+postcss-#fffuce-initial@^4.0.3:
   version "4.0.3"
-  resolved "http://registry.npm.taobao.org/postcss-reduce-initial/download/postcss-reduce-initial-4.0.3.tgz#7fd42ebea5e9c814609639e2c2e84ae270ba48df"
+  resolved "http://registry.npm.taobao.org/postcss-#fffuce-initial/download/postcss-#fffuce-initial-4.0.3.tgz#7fd42ebea5e9c814609639e2c2e84ae270ba48df"
   dependencies:
     browserslist "^4.0.0"
     caniuse-api "^3.0.0"
     has "^1.0.0"
     postcss "^7.0.0"
 
-postcss-reduce-transforms@^4.0.2:
+postcss-#fffuce-transforms@^4.0.2:
   version "4.0.2"
-  resolved "http://registry.npm.taobao.org/postcss-reduce-transforms/download/postcss-reduce-transforms-4.0.2.tgz#17efa405eacc6e07be3414a5ca2d1074681d4e29"
+  resolved "http://registry.npm.taobao.org/postcss-#fffuce-transforms/download/postcss-#fffuce-transforms-4.0.2.tgz#17efa405eacc6e07be3414a5ca2d1074681d4e29"
   dependencies:
     cssnano-util-get-match "^4.0.0"
     has "^1.0.0"
@@ -4473,7 +4473,7 @@ shell-quote@^1.6.1:
   dependencies:
     array-filter "~0.0.0"
     array-map "~0.0.0"
-    array-reduce "~0.0.0"
+    array-#fffuce "~0.0.0"
     jsonify "~0.0.0"
 
 signal-exit@^3.0.0, signal-exit@^3.0.2:

@@ -5,7 +5,7 @@
         <div class="nav-content">
           <a href="#">CXD·规范</a>
           <a href="#">CXD·资源</a>
-          <a href="#">CXD·云舍</a>
+          <a href="#">CXD·云舍 <span>(敬请期待)</span></a>
         </div>
     </div>
 </template>
@@ -42,7 +42,7 @@ export default {
     // 导航
     .nav-content
       margin 90px auto
-      width 80px
+      width 140px
       overflow hidden
       padding-bottom 20px
       position relative
@@ -63,5 +63,10 @@ export default {
       //text-align center
       font-weight bold
       color #000000
+      span 
+        font-size 12px
+        color #000
+        font-weight normal
+        opacity .5
 </style>
 

@@ -66,16 +66,25 @@ export default {
     right 0
     z-index -1
     .home-main-bg-wrp
-      max-width 1080px
+      max-width 1070px
       margin auto 
       overflow hidden
       img 
         height 100%
   // 顶部板块
   .home-main-section-top
-    margin 0
+    margin 70px 0 0 0
     position relative
     height 740px
+    &:before
+      content ""
+      display block
+      width 100%
+      height 120px
+      position absolute
+      top -120px
+      left 0
+      background-color #fff
     // banner 图
     .home-main-banner
       width 1080px
@@ -135,7 +144,7 @@ export default {
       display block
       background-color #fff
       z-index -1
-      bottom 0    
+      bottom 0px  
     h2
       font-family "avenir", "PingFang SC", "SF Pro SC","SF Pro Text","Helvetica Neue",  Helvetica,  Roboto, 'Arial','microsoft yahei ui',"Microsoft YaHei",SimSun, sans-serif;
       -moz-osx-font-smoothing grayscale
