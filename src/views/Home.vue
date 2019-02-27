@@ -7,9 +7,9 @@
       <!-- 插槽 -->
       <slot></slot> 
     </div>
-    <!-- 背景图 -->
+    <!-- 背景视频 -->
     <div class="home-bg">
-      <img src="@/assets/bg.png" alt="">
+      <video src="@/assets/bg.mp4" autoplay="autoplay" muted loop/>
     </div>
   </div>
 </template>
@@ -49,5 +49,7 @@ export default {
     top 0
     z-index -1
     overflow hidden
+    video 
+      height 100%
 </style>
 

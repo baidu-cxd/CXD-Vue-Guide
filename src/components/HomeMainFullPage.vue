@@ -93,7 +93,7 @@ data () {
             }
         },
         _begin () {
-            this.carouselTimer = setInterval (this.autoPlay, 3000)
+            this.carouselTimer = setInterval (this.autoPlay, 5000)
             },
         }
 }
