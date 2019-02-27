@@ -4,9 +4,20 @@
         <div class="mask left"></div>
         <div class="mid">
           <div class="top"></div>
+          <transition name="fade">
           <div class="mask">
-              <img src="@/assets/c-mask.png" alt="">
+            <img :src="carouselList[0].src" alt="" class="op">
+            <transition-group name="list" tag="div" class="img-mask">
+              <div class="img-mask-group" 
+                v-for="(src,index) in carouselList" 
+                v-bind:key="src.src"
+                v-show="currentIndex === index">
+                  <div class="img-mask"></div>
+                  <img :src="src.src" alt="">
+              </div>
+            </transition-group>
           </div>
+          </transition>
           <div class="bottom"></div>
         </div>   
         <div class="mask right"></div> 
@@ -16,8 +27,78 @@
         <div class="hero-text-line">EXPERIENCE</div>
         <div class="hero-text-line">DESIGN</div>
       </div>
+      <div class="carouse">
+          <div :class="[currentIndex === 0? 'current':'']" @click='changeCarouse(0)'></div>
+          <div :class="[currentIndex === 1? 'current':'']" @click='changeCarouse(1)'></div>
+          <div :class="[currentIndex === 2? 'current':'']" @click='changeCarouse(2)'></div>
+      </div>
   </div>
 </template>
+
+<script>
+export default {
+data () {
+    return {
+      /**
+       * 图片src
+       */
+      src: require('@/assets/c-mask.png'),
+      /**
+       * 轮播图数据
+       */
+      carouselList: [
+        {
+          text: '1. 第一张图片', 
+          src: require('@/assets/c-mask.png')
+        },
+        {
+          text: '2. 第二张图片',
+          src: require('@/assets/x-mask.png'),
+        },
+         {
+          text: '3. 第三张图片',
+          src: require('@/assets/d-mask.png'),
+        }
+      ],
+      /**
+       * 当前正在显示的图片
+       */
+      currentIndex: 0,
+      /**
+       * 切换图片定时器
+       */
+      carouselTimer: null,
+      /**
+       * 是不是手动切换过
+       */
+      isChangeByUser: false,
+    }
+  },
+    mounted () {
+        this._begin()
+    },
+    methods: {
+        changeCarouse(i) {
+            this.currentIndex = i
+            this.isChangeByUser = true 
+        },
+        autoPlay () {
+            if (!this.isChangeByUser) {
+              this.currentIndex++
+              if (this.currentIndex >= this.carouselList.length) {
+                this.currentIndex = 0
+              }
+            } else {
+               this.isChangeByUser = false 
+            }
+        },
+        _begin () {
+            this.carouselTimer = setInterval (this.autoPlay, 3000)
+            },
+        }
+}
+</script>
+
 
 <style lang="stylus">
   .home-main-full-page
@@ -45,9 +126,60 @@
         height -webkit-fit-content
         height -moz-fit-content
         position relative
-        img 
+        .img-mask
+          position absolute
+          top 0
+          left 0
+          right 0
+          bottom 0
+          overflow hidden
+          .img-mask-group
+            position absolute
+            top 0
+            left 0
+            right 0
+            bottom 0
+            img
+              width 102%
+              display block
+              position absolute
+              top -1%
+              left -1%
+              z-index 1
+            .img-mask
+              top 0
+              left 0
+              right 0
+              bottom 0
+              height 100%
+              //background-color #ffffff
+              z-index 2
+              position relative
+              overflow visible
+              &:before
+                position absolute
+                width 300px
+                top 0
+                bottom 0
+                content ""
+                display block
+                left -300px
+                background-color #fff
+                z-index 2
+              &:after
+                position absolute
+                width 300px
+                top 0
+                bottom 0
+                content ""
+                display block
+                right -300px
+                background-color #fff
+                z-index 2
+        img.op
           width 100%
-          display block  
+          display block 
+          opacity 0
       .top
         background-color #fff
         -webkit-box-flex 1
@@ -60,13 +192,58 @@
       background-color #fff
       -webkit-box-flex 1
       flex 1
+// 轮播图
+.list-leave-active
+  transition all .01s ease-in-out
+.list-enter-active
+  transition all 1s ease-out .01s
+  .img-mask
+    transition all .2s ease-in-out .01s
+.list-leave-to
+  opacity 0
+.list-enter
+  transform translateX(-80px)
+  .img-mask
+    background-color rgba(255,255,255,1)
+.list-enter-to
+  transform translateX(0px)
+  .img-mask
+    background-color rgba(255,255,255,0)
+.home-main-full-page
+  .carouse
+    position absolute
+    bottom 40px
+    right 60px
+    z-index 103
+    div
+      width 20px
+      height 2px
+      background-color #ccc
+      float left
+      margin-left 10px
+      position relative
+      &:after
+        position absolute
+        top -20px
+        left 0
+        width 100%
+        height 40px
+        display block
+        content " "
+      &.current
+        background-color #000
+      &:hover
+        cursor pointer
+        
 
+// 文字
 .hero-text
   position absolute
   left 40%
   transform translateX(-50%)
   bottom 22%
   font-size 72px
+  z-index 3
   .hero-text-line  
     display block
     width fit-content
