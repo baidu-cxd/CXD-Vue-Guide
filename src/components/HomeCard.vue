@@ -4,32 +4,32 @@
     <div class="home-card-inner">
         <div class="left"></div>
         <div class="content">
-          <div class="card">
+          <a href="http://v3.yunshe.design" class="card">
               <img src="@/assets/pic1.png" alt="">
               <div class="bottom">
                 <h4>CXD·规范</h4>
                 <p>一套服务百度云业务的设计规范</p>
-                <a href="#">READ MORE</a>
+                <span>READ MORE</span>
               </div>
-          </div>
+          </a>
           <div class="mask"></div>
-          <div class="card">
+          <a href="http://img.yunshe.design" class="card">
               <img src="@/assets/pic2.png" alt="">
               <div class="bottom">
-                <h4>CXD·规范</h4>
-                <p>一套服务百度云业务的设计规范</p>
-                <a href="#">READ MORE</a>
+                <h4>CXD·资源</h4>
+                <p>图标、PPT等各项资源汇总平台</p>
+                <span>READ MORE</span>
               </div>
-          </div>
+          </a>
           <div class="mask"></div>
-          <div class="card">
+          <a href="#" class="card">
               <img src="@/assets/pic3.png" alt="">
               <div class="bottom">
-                <h4>CXD·规范</h4>
-                <p>一套服务百度云业务的设计规范</p>
-                <a href="#">READ MORE</a>
+                <h4>CXD·云舍</h4>
+                <p>百度云用户体验团队官网</p>
+                <span class="soon">COMING SOON</span>
               </div>
-          </div>
+          </a>
         </div>
         <div class="right"></div>
     </div>
@@ -50,6 +50,7 @@
       flex 1 
       display flex
       .card
+        display block
         max-width 220px
         width 26%  
         img 
@@ -94,7 +95,7 @@
         color #3A3A3A
         padding-top 10px
         padding-bottom 0px
-      a
+      span
         display block
         margin 0
         font-size 12px
@@ -102,7 +103,7 @@
         height 34px
         padding-top 15px
         padding-bottom 10px
-        width 120px
+        width 140px
         font-family "avenir", "PingFang SC", "SF Pro SC","SF Pro Text","Helvetica Neue",  Helvetica,  Roboto, 'Arial','microsoft yahei ui',"Microsoft YaHei",SimSun, sans-serif;
         -moz-osx-font-smoothing grayscale
         -webkit-font-smoothing antialiased
@@ -119,5 +120,16 @@
           left 0
           width 35px
           background-color #000
+          transition all .2s ease-in-out
+// 交互动画
+
+.home-card 
+  .card:hover
+    span:after
+      width 80px
+.home-card 
+  .card:hover
+    span.soon:after
+      width 35px
 </style>
 

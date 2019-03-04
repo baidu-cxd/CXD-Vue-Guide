@@ -1,7 +1,6 @@
 <template>
     <div class="cxd-footer">
-        <a href="#">Cloud Design</a>
-        <a href="#">Cloud Lab</a>
+        <a href="http://bce-website.cdn.bcebos.com/">Cloud Lab</a>
         <p>Copyright ©2018 Cxd-Design</p>
     </div>
 </template>
@@ -19,15 +18,17 @@
      display block
      margin 50px -50px 0 80px
      float left 
-     color #000
+     color #3a3a3a
      font-weight bold
+     &:hover
+       text-decoration underline
     &:before
       margin 0 80px 
       width auto
       content ""
       display block
       height 1px
-      background-color #000
+      background-color #DFDFDF
     p 
       float right
       margin 50px 80px 0 0

@@ -10,7 +10,7 @@ npm run build
 cd dist
 
 # 如果是发布到自定义域名
-#echo 'yunshe.design' > CNAME
+echo 'yunshe.design' > CNAME
 
 git init
 git add -A
@@ -20,6 +20,6 @@ git commit -m 'deploy'
 #git push -f git@github.com:dingzu/dingzu.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:dingzu/cxd-guide.git master:gh-pages
+git push -f git@github.com:dingzu/acuStd2.git master:gh-pages
 
 cd -

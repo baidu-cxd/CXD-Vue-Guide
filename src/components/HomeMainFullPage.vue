@@ -1,5 +1,6 @@
 <template>
   <div class="home-main-full-page">
+      <div class="buttom"><div class="circle"></div></div>
       <div class="flex-content">
         <div class="mask left"></div>
         <div class="mid">
@@ -101,12 +102,17 @@ data () {
 
 
 <style lang="stylus">
+  .home.first-page
+    .home-main-full-page
+      transform translateY(0)
   .home-main-full-page
+    transition all 1s cubic-bezier(0.11, 0.73, 0.24, 0.98) //首屏动画
     width 100%
-    height 100%
+    height 101%
     position absolute
     top 0
     left 0
+    transform translateY(-100%)
     .flex-content
       position absolute
       width 100%
@@ -255,8 +261,10 @@ data () {
     font-family "avenir", "PingFang SC", "SF Pro SC","SF Pro Text","Helvetica Neue",  Helvetica,  Roboto, 'Arial','microsoft yahei ui',"Microsoft YaHei",SimSun, sans-serif;
     -moz-osx-font-smoothing grayscale
     -webkit-font-smoothing antialiased
+    color rgba(0,0,0,0)
     font-weight 900
     position relative
+    animation showfont .05s ease-in-out .3s forwards
     &::after
       position absolute
       left 0
@@ -266,6 +274,7 @@ data () {
       content " "
       display block
       background-color #000
+      animation lineshow1 .4s ease-in-out ,lineshow2 .6s ease-in-out .4s
 @media screen and (max-width: 1200px)
   .hero-text
     font-size 60px
@@ -274,7 +283,52 @@ data () {
     font-size 40px
     bottom 30%
     left 50%
-</style>
+@keyframes showfont 
+  0%
+    color rgba(0,0,0,0)
+  100%
+    color rgba(0,0,0,1)
+@keyframes lineshow1
+  0%
+    height 1.1em
+    width 0
+  80%
+    height 1.1em
+    width 100%
+  100%
+    height 1.1em
+    width 100%
+@keyframes lineshow2
+  0%
+    height 1.1em
+  20%
+    height 1.1em
+  100%
+    height 7px
+// 滚动提示动画
+.buttom
+  position absolute
+  left 40px
+  bottom 80px
+  z-index 4
+  width 1px
+  height 60px
+  background-color #000
+  .circle
+    width 9px
+    height 9px
+    position absolute
+    top -4px
+    left -4px
+    background-color #000
+    border-radius 100px
+    animation move 2s infinite
+
+@keyframes move
+  from
+    transform translateY(0)
+  to
+    transform translateY(60px)
 </style>
 
 

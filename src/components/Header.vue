@@ -63,6 +63,7 @@ export default {
       &:hover
         cursor pointer
       .humberger-ele
+        transition .2s all ease-in-out
         display block
         width 15px
         height 2px
