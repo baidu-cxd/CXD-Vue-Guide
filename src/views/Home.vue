@@ -61,12 +61,14 @@ export default {
        var firstPageHeight = this.browserHeight
        if(this.isFirstPage) {
          if (i > 0) {
-           this.isFirstPage = false;
+           //setTimeout(()=>{this.isFirstPage = false;},500);
          }
        }
        if(!this.isFirstPage) {
          if (scrollTop === 0) {
-           this.isFirstPage = true;
+           if (i < 0) {
+              //setTimeout(()=>{this.isFirstPage = true;},500);
+           }
          }
        }
      },
