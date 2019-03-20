@@ -9,7 +9,7 @@
     </div>
     <!-- 背景视频 -->
     <div class="home-bg">
-      <video src="@/assets/bg.mp4" autoplay="autoplay" muted loop/>
+      <video src="https://cxd-public.cdn.bcebos.com/cxd-guide/bg.mp4" autoplay="autoplay" muted loop/>
     </div>
   </div>
 </template>

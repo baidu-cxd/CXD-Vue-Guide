@@ -92,7 +92,7 @@ export default {
     transform translateY(-50%)
     top 50% 
     img 
-      height  20px
+      height  18px
       transform rotate(90deg)
 </style>
 
